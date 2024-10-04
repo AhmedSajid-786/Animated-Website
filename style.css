@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+    color: #ffffff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 100px;
+    gap: 20px;
+    font-size: 15px;
+    position: fixed;
+    z-index: 99;
+}
+
+#nav img {
+    height: 65px;
+}
+
+#nav h4 {
+    font-weight: 500;
+}
+
+#cursor {
+    height: 25px;
+    width: 25px;
+    background-color: #95c11e;
+    position: fixed;
+    z-index: 99;
+    border-radius: 50%;
+}
+
+#cursor-blur {
+    height: 200px;
+    width: 200px;
+    background-color: #95c11e;
+    position: fixed;
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: 9;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 90px;
+    font-weight: 800;
+}
+
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    margin-top: -3px;
+    color: black;
+    margin-left: -3px;
+    -webkit-text-stroke: 0.5px #95c11e;
+    z-index: -1;
+}
+
+#page1 h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 15px;
+    font-weight: 500;
+    width: 50%;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+    
+}
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+  }
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  #scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900; 
+    font-family: gilroy;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
+  }
+  #scroller h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  #about-us {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: space-around;
+    height: 40vh;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    z-index: 10;
+    margin-bottom:120px;
+}
+
+  #about-us img {
+    height: 170px;
+    width: 170px;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+  }
+  #about-us h3 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  #about-us p {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+#cards-container {
+    /* background-color: red; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+
+}
+
+.card {
+    height: 100%;
+    width: 25%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 10;
+    transition: all ease 0.6s;
+}
+
+#card1 {
+    background: url(Toptracer-Range-35.jpg);
+}
+#card2 {
+    background: url(pexels-mikebirdy-410859.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#card3 {
+    background: url(pexels-matthew-goeckner-305647657-23697954.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+  background-color: #95c11e;
+  height: 100%;
+  width: 100%;
+  padding: 100px 30px 30px 30px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+
+.overlay h4 {
+  color: black;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  color: black;
+  line-height: 2;
+}
+.overlay:hover {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: rotate3d(0, 1, 0, 20deg);
+}
+
+#green-div {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  
+ background: linear-gradient(to left bottom, #119f3a, #ace022);
+}
+
+#green-div h4 {
+ width: 45%;
+ font-size: 23px;
+ text-transform: uppercase;
+ line-height: 2;
+ color: #000;
+ font-weight: 800;
+
+}
+
+#green-div img {
+  height: 100%;
+  object-fit: cover;
+  width: 10%;
+}
+
+#page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#page3>p {
+  font-size: 25px;
+  font-weight: 700;
+  width: 60%;
+  text-align: center;
+  line-height: 40px;
+}
+
+#page3 img {
+  position: absolute;
+  height: 40px;
+}
+
+#page3 #colon1 {
+  left: 12%;
+  top: 20%;
+}
+#page3 #colon2 {
+  right: 12%;
+  bottom: 20%;
+}
+
+#page4 {
+  height: 50vh;
+  width: 100%;
+  background-color: red;
+}
+
